@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace CadastroClientes
 {
@@ -22,6 +10,23 @@ namespace CadastroClientes
         public Cadastro()
         {
             InitializeComponent();
+        }
+
+        private void btnLimparCampos_Click(object sender, RoutedEventArgs e)
+        {
+           this.LimpaCamposEndereco();
+        }
+
+        private void LimpaCamposEndereco()
+        {
+            txtDescricao.Text = string.Empty;
+            txtLogradouro.Text = string.Empty;
+            txtNumero.Text = string.Empty;
+            txtComplemento.Text = string.Empty;
+            txtBairro.Text = string.Empty;
+            txtCidade.Text = string.Empty;
+            txtUf.Text = string.Empty;
+            txtCep.Text = string.Empty;
         }
     }
 }

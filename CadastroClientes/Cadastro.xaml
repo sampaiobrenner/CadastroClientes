@@ -30,7 +30,7 @@
                 <Label Content="Uf" HorizontalAlignment="Left" Margin="23,196,0,0" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtCep" HorizontalAlignment="Left" Height="23" Margin="119,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                 <Label Content="CEP" HorizontalAlignment="Left" Margin="23,222,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="btnLimparCampos" Content="Limpar Campos" HorizontalAlignment="Left" Margin="23,261,0,0" VerticalAlignment="Top" Width="101"/>
+                <Button x:Name="btnLimparCampos" Content="Limpar Campos" HorizontalAlignment="Left" Margin="23,261,0,0" VerticalAlignment="Top" Width="101" Click="btnLimparCampos_Click"/>
                 <Button x:Name="btnInserir" Content="Inserir" HorizontalAlignment="Left" Margin="153,261,0,0" VerticalAlignment="Top" Width="75"/>
             </Grid>
         </GroupBox>

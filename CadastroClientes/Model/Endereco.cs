@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CadastroClientes.Model
+﻿namespace CadastroClientes.Model
 {
     public class Endereco
     {
+        public Cliente Cliente { get; set; }
+        public int Codigo { get; set; }
         public string Descricao { get; set; }
         public string Logradouro { get; set; }
         public string Numero { get; set; }
