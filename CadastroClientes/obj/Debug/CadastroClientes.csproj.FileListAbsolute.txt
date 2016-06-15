@@ -16,3 +16,5 @@ D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\bin\D
 D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\bin\Debug\MySql.Data.dll
 D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.exe
 D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.pdb
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.exe
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.pdb
