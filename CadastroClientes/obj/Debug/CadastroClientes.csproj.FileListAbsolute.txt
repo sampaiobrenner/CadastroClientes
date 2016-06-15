@@ -1,2 +1,18 @@
 D:\Camilo\Trabalho2Bim\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.exe.config
 D:\GitHub\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.exe.config
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\bin\Debug\CadastroClientes.exe.config
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.csprojResolveAssemblyReference.cache
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\Cadastro.baml
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\MainWindow.baml
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\Cadastro.g.cs
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\MainWindow.g.cs
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\App.g.cs
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes_MarkupCompile.cache
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.g.resources
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.Properties.Resources.resources
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.csproj.GenerateResource.Cache
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\bin\Debug\CadastroClientes.exe
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\bin\Debug\CadastroClientes.pdb
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\bin\Debug\MySql.Data.dll
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.exe
+D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.pdb

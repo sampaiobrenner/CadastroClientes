@@ -14,7 +14,7 @@ namespace CadastroClientes.DAO
         private MySqlCommand ComandosCliente(string sql, Cliente cliente)
         {
             var cmd = new MySqlCommand(sql);
-            
+
             cmd.Parameters.Add(new MySqlParameter("@NOME", cliente.Nome));
             cmd.Parameters.Add(new MySqlParameter("@CPF", cliente.Cpf));
 
@@ -69,12 +69,34 @@ namespace CadastroClientes.DAO
 
         public void Deletar(Cliente cliente)
         {
+#warning VERIFICAR QUERY
             var sql = "DELETE FROM cliente as c, endereco as e  WHERE c.cpf = @CPF OR e.cpfcliente = @CPF";
 
             ExecutarComando(this.ComandosParamCpf(sql, cliente.Cpf.ToString()));
         }
 
-        public List<Cliente> BuscarClientes(Cliente cliente)
+        public void Editar(Cliente cliente)
+        {
+            var sql = "UPDATE cliente SET nome = @NOME WHERE cpf=@CPF";
+            var cmd = new MySqlCommand(sql);
+            cmd.Parameters.AddWithValue("@NOME", cliente.Nome);
+            cmd.Parameters.AddWithValue("@CPF", cliente.Cpf);
+
+            var commandEndereco = new List<MySqlCommand>();
+
+            commandEndereco.Add(cmd);
+            foreach (var endereco in cliente.Enderecos)
+	        {
+                sql = "UPDATE endereco SET descricao = @DESCRICAO, logradouro = @LOGRADOURO, numero = @NUMERO, "+
+                    "complemento = @COMPLEMENTO, bairro = @BAIRRO, cidade = @CIDADE, uf = @UF, "+
+                    "cep = CEP WHERE cpfcliente = @CPFCLIENTE";
+                commandEndereco.Add(ComandosEndereco(sql, endereco, cliente.Cpf.ToString()));
+            }
+
+            ExecutarComandos(commandEndereco);
+        }
+
+        public List<Cliente> BuscarTodosClientes(Cliente cliente)
         {
             var listCliente = new List<Cliente>();
 

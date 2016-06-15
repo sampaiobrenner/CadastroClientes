@@ -8,11 +8,11 @@
         <TextBox x:Name="txtCadastroNome" HorizontalAlignment="Left" Height="23" Margin="84,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="CPF" HorizontalAlignment="Left" Margin="18,101,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtCadastroCpf" HorizontalAlignment="Left" Height="23" Margin="84,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="listCadastroEndereco" HorizontalAlignment="Left" Height="112" Margin="18,162,0,0" VerticalAlignment="Top" Width="191"/>
-        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="134,325,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox x:Name="listCadastroEndereco" HorizontalAlignment="Left" Height="112" Margin="18,162,0,0" VerticalAlignment="Top" Width="191" SelectionChanged="listCadastroEndereco_SelectionChanged"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="134,325,0,0" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="33,325,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Lista de Endereços" HorizontalAlignment="Left" Margin="23,136,0,0" VerticalAlignment="Top"/>
-        <GroupBox Header="Cadastrar Endereços" HorizontalAlignment="Left" Margin="233,57,0,0" VerticalAlignment="Top" Height="335" Width="279">
+        <GroupBox Header="Cadastrar Endereços" HorizontalAlignment="Left" Margin="233,57,0,0" VerticalAlignment="Top" Height="346" Width="279">
             <Grid Margin="2,10,-2,1">
                 <TextBox x:Name="txtDescricao" HorizontalAlignment="Left" Height="23" Margin="119,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                 <Label Content="Descrição" HorizontalAlignment="Left" Margin="23,24,0,0" VerticalAlignment="Top"/>
@@ -31,9 +31,10 @@
                 <TextBox x:Name="txtCep" HorizontalAlignment="Left" Height="23" Margin="119,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                 <Label Content="CEP" HorizontalAlignment="Left" Margin="23,222,0,0" VerticalAlignment="Top"/>
                 <Button x:Name="btnLimparCampos" Content="Limpar Campos" HorizontalAlignment="Left" Margin="23,261,0,0" VerticalAlignment="Top" Width="101" Click="btnLimparCampos_Click"/>
-                <Button x:Name="btnInserir" Content="Inserir" HorizontalAlignment="Left" Margin="153,261,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="btnInserir" Content="Inserir" HorizontalAlignment="Left" Margin="153,261,0,0" VerticalAlignment="Top" Width="75" Click="btnInserir_Click"/>
+                <Label Name="lblErro" Content="" HorizontalAlignment="Left" Margin="25,282,0,0" VerticalAlignment="Top" Background="#00000000"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="btnDeletarEndereco" Content="Deletar Endereço" HorizontalAlignment="Left" Margin="99,279,0,0" VerticalAlignment="Top" Width="105"/>
+        <Button x:Name="btnDeletarEndereco" Content="Deletar Endereço" HorizontalAlignment="Left" Margin="99,279,0,0" VerticalAlignment="Top" Width="105" Click="btnDeletarEndereco_Click"/>
     </Grid>
 </Window>
