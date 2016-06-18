@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Linq;
 using System;
+using CadastroClientes.DAO;
+using MySql.Data.MySqlClient;
 
 namespace CadastroClientes
 {
@@ -10,9 +12,30 @@ namespace CadastroClientes
     /// </summary>
     public partial class Cadastro : Window
     {
+        public Cliente ClienteAlterado { get; set; }
+
+        public bool Alterado { get; set; }
+
         public Cadastro()
         {
             InitializeComponent();
+        }
+
+        public Cadastro(Cliente cliente)
+        {
+            InitializeComponent();
+            this.ClienteAlterado = cliente;
+            this.Alterado = true;
+
+            txtCadastroNome.Text = ClienteAlterado.Nome;
+            txtCadastroCpf.Text = ClienteAlterado.Cpf.ToString();
+
+            txtCadastroCpf.IsEnabled = false;
+
+            foreach (var endereco in this.ClienteAlterado.Enderecos)
+            {
+                listCadastroEndereco.Items.Add(endereco);
+            }
         }
 
         private void btnLimparCampos_Click(object sender, RoutedEventArgs e)
@@ -49,7 +72,9 @@ namespace CadastroClientes
             if (listCadastroEndereco.Items.Contains(endereco))            
                 lblErro.Content = "Já existe um endereço na lista com este nome";            
             else            
-                listCadastroEndereco.Items.Add(endereco.ToString());            
+                listCadastroEndereco.Items.Add(endereco);
+
+            this.LimpaCamposEndereco();
         }
 
         private void listCadastroEndereco_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -76,16 +101,52 @@ namespace CadastroClientes
 
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            var novoCliente = new Cliente
+            try
             {
-                Nome = txtCadastroNome.Text,
-                Cpf = Convert.ToInt32(txtCadastroCpf.Text),
-            };
+                if (this.Alterado)
+                {
+                    this.ClienteAlterado.Nome = txtCadastroNome.Text;
+                    this.ClienteAlterado.Cpf = Convert.ToInt32(txtCadastroCpf.Text);
 
-            foreach (var endereco in listCadastroEndereco.Items)
-                novoCliente.Enderecos.Add(endereco as Endereco);
+                    this.ClienteAlterado.Enderecos.Clear();
 
-#warning TERMINAR ESTE METODO DE ADICIONAR ENDERECO NO BANCO
+                    foreach (var endereco in listCadastroEndereco.Items)
+                        this.ClienteAlterado.Enderecos.Add(endereco as Endereco);
+
+                    var editar = new ClienteDao();
+                    editar.Editar(this.ClienteAlterado);
+
+                    MessageBox.Show("Cliente editado com sucesso.", "Menssagem.");
+                    this.Close();
+                }
+                else
+                {
+                    var novoCliente = new Cliente
+                    {
+                        Nome = txtCadastroNome.Text,
+                        Cpf = Convert.ToInt32(txtCadastroCpf.Text),
+                    };
+
+                    foreach (var endereco in listCadastroEndereco.Items)
+                        novoCliente.Enderecos.Add(endereco as Endereco);
+
+                    var inserir = new ClienteDao();
+                    inserir.Inserir(novoCliente);
+
+                    MessageBox.Show("Cliente inserido com sucesso.", "Menssagem.");
+                    this.Close();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erro ao tentar inserir os dados.\r\n" + ex, "Erro");
+            }
+            
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

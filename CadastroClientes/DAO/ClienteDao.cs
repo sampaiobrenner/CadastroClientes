@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -70,7 +71,7 @@ namespace CadastroClientes.DAO
         public void Deletar(Cliente cliente)
         {
 #warning VERIFICAR QUERY
-            var sql = "DELETE FROM cliente as c, endereco as e  WHERE c.cpf = @CPF OR e.cpfcliente = @CPF";
+            var sql = "DELETE FROM cliente as c JOIN endereco as e ON c.cpf = e.cpfcliente WHERE c.cpf = @CPF OR e.cpfcliente = @CPF";
 
             ExecutarComando(this.ComandosParamCpf(sql, cliente.Cpf.ToString()));
         }
@@ -96,12 +97,13 @@ namespace CadastroClientes.DAO
             ExecutarComandos(commandEndereco);
         }
 
-        public List<Cliente> BuscarTodosClientes(Cliente cliente)
+        public List<Cliente> BuscarClienteByNome(string nome)
         {
             var listCliente = new List<Cliente>();
 
-            var sql = "SELECT * FROM cliente";
+            var sql = "SELECT * FROM cliente WHERE nome = @NOME";
             var cmd = new MySqlCommand(sql);
+            cmd.Parameters.AddWithValue("@NOME", nome);
             var dTable = this.RetornarDataTable(cmd);
             foreach (DataRow row in dTable.Rows)
             {

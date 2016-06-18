@@ -18,3 +18,16 @@ D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\D
 D:\Camilo\TRABALHO DELETAR DEPOIS\CadastroClientes-master\CadastroClientes\obj\Debug\CadastroClientes.pdb
 D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.exe
 D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.pdb
+D:\GitHub\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.exe
+D:\GitHub\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.pdb
+D:\GitHub\CadastroClientes\CadastroClientes\bin\Debug\MySql.Data.dll
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.csprojResolveAssemblyReference.cache
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\Cadastro.baml
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\MainWindow.baml
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\Cadastro.g.cs
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\MainWindow.g.cs
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\App.g.cs
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes_MarkupCompile.cache
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.g.resources
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.Properties.Resources.resources
+D:\GitHub\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.csproj.GenerateResource.Cache
